@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FPA Test Report Hub</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    header .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #58a6ff;
+      letter-spacing: -0.5px;
+    }
+
+    header .sub {
+      font-size: 13px;
+      color: #8b949e;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 48px auto;
+      padding: 0 24px;
+    }
+
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #8b949e;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #21262d;
+      padding-bottom: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 20px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s, background 0.15s;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card:hover {
+      border-color: #58a6ff;
+      background: #1c2128;
+    }
+
+    .card.disabled {
+      opacity: 0.45;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #58a6ff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-title .badge {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: #388bfd26;
+      color: #58a6ff;
+      letter-spacing: 0.5px;
+    }
+
+    .card-title .badge.pending {
+      background: #3d2f0b;
+      color: #d29922;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: #8b949e;
+      line-height: 1.5;
+    }
+
+    .card-meta {
+      font-size: 12px;
+      color: #484f58;
+      margin-top: 4px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #484f58;
+      padding: 32px;
+      border-top: 1px solid #21262d;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="logo">FPA Test Report Hub</div>
+    <div class="sub">Fisher &amp; Paykel Automation Platform &mdash; Playwright HTML Reports</div>
+  </div>
+</header>
+
+<main>
+
+  <h2>Salesforce</h2>
+  <div class="grid">
+    <a class="card" href="salesforce/oms/oms-test-report/index.html">
+      <div class="card-title">OMS Scenarios <span class="badge">UI</span></div>
+      <div class="card-desc">Order management end-to-end scenarios including creation, cancellation, delivery, payments, promotions and agency/TPP flows.</div>
+      <div class="card-meta">projects/salesforce/oms &bull; 32 scenarios</div>
+    </a>
+  </div>
+
+  <h2>FP OpenWebUI</h2>
+  <div class="grid">
+    <a class="card" href="fp-openwebui-test-report/index.html">
+      <div class="card-title">OpenWebUI Tests <span class="badge">UI</span></div>
+      <div class="card-desc">Fisher &amp; Paykel OpenWebUI smoke and regression suite.</div>
+      <div class="card-meta">projects/fp-openwebui</div>
+    </a>
+  </div>
+
+  <h2>Coming Soon</h2>
+  <div class="grid">
+    <div class="card disabled">
+      <div class="card-title">Commerce / SFCC <span class="badge pending">Pending</span></div>
+      <div class="card-desc">Checkout, cart and product catalog E2E flows.</div>
+      <div class="card-meta">projects/commerce</div>
+    </div>
+    <div class="card disabled">
+      <div class="card-title">TPP Agency Portal <span class="badge pending">Pending</span></div>
+      <div class="card-desc">Third-party partner order and quote flows.</div>
+      <div class="card-meta">projects/salesforce/tpp</div>
+    </div>
+    <div class="card disabled">
+      <div class="card-title">JDE Integration <span class="badge pending">Pending</span></div>
+      <div class="card-desc">JD Edwards sync and order dispatch verification.</div>
+      <div class="card-meta">projects/salesforce/jde</div>
+    </div>
+    <div class="card disabled">
+      <div class="card-title">Shared Flows / E2E <span class="badge pending">Pending</span></div>
+      <div class="card-desc">Cross-system end-to-end order lifecycle tests.</div>
+      <div class="card-meta">projects/shared-flows</div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  FPA Test Automation Platform &mdash; Auto-published by GitHub Actions &mdash;
+  <a href="https://github.com/gautamroop/FPA-Test-Automation-Platform" style="color:#58a6ff;">Source</a>
+</footer>
+
+</body>
+</html>
